@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "account",
     'pinax_theme_bootstrap',
     'bootstrapform',
+    "carpoint",
 ]
 
 SITE_ID = 1
@@ -130,8 +131,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = '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'
+EMAIL_HOST_USER = 'mmzepedab'
+EMAIL_HOST_PASSWORD = 'Q1w2e3r4t5@'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

@@ -1,0 +1,13 @@
+<html>
+
+<body>
+Home
+{% if user.is_authenticated %}
+    <p>Welcome, {{ user.get_username }}. Thanks for logging in. <a href="{% url "account_logout" %}">Logout</a></p>
+{% else %}
+    <p>Welcome, new user. Please log in. <a href="{% url "account_login" %}">Login</a></p>
+{% endif %}
+
+</body>
+
+</html>
