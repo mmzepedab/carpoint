@@ -1,1 +1,2 @@
 pinax-theme-bootstrap
+pymysql
