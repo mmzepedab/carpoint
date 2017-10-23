@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pinax_theme_bootstrap',
     'bootstrapform',
     "carpoint",
+    "casos",
 ]
 
 SITE_ID = 1
