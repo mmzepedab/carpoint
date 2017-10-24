@@ -1,2 +1,3 @@
 pinax-theme-bootstrap
 pymysql
+django-material
