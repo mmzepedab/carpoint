@@ -42,7 +42,16 @@ Se utiliza entornos virutales para manejar las dependecias por separado
 
 Se utilizo un metodo de manejo de usuarios para facilitar la creacion y mantenimiento de los mismos
 * [django-user-accounts](https://github.com/pinax/django-user-accounts) - provides a Django project with a very extensible infrastructure for dealing with user accounts.
- 
+
+Agregando estilo a la interfaz de administrador con Material Design
+* [django-user-accounts](https://github.com/viewflow/django-material) - Material design for Django Forms and Admin. Template driven.   
+### Meterial Admin
+[Material Admin Docs](http://docs.viewflow.io/material_admin.html)
+```
+pip install django-material
+```
+
+
 
 ## Running the tests
 
