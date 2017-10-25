@@ -8,6 +8,7 @@ from casos.models import (
 
 
 class CasoAdmin(admin.ModelAdmin):
-    list_display = ["descripcion", "fecha_creado"]
+    list_display = ["id","descripcion", "fecha_creado"]
+    search_fields = ['id']
 
 admin.site.register(Caso, CasoAdmin)
