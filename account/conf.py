@@ -53,7 +53,7 @@ class AccountAppConf(AppConf):
     EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = None
     EMAIL_CONFIRMATION_URL = "account_confirm_email"
     SETTINGS_REDIRECT_URL = "account_settings"
-    NOTIFY_ON_PASSWORD_CHANGE = True
+    NOTIFY_ON_PASSWORD_CHANGE = False
     DELETION_EXPUNGE_HOURS = 48
     HOOKSET = "account.hooks.AccountDefaultHookSet"
     TIMEZONES = TIMEZONES
