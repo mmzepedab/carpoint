@@ -29,9 +29,7 @@
 
                 <div class="panel-heading clearfix">
                                       <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Casos</h4>
-                                          <div class="pull-right">
-                                            <a href="#" class="btn btn-success btn-sm"><i class="fa fa-plus fa-fw"></i></a>
-                                          </div>
+
                                     </div>
             </div>
             <div class="panel-body">
@@ -40,9 +38,9 @@
 
 
 
-                {% for place in places %}
+                {% for caso in casos %}
 
-                            <a href="{% url 'detail_place' place.id %}" class="list-group-item clearfix">
+                            <a href="#" class="list-group-item clearfix">
 
 
 
@@ -54,16 +52,8 @@
                                     &emsp;
                                 </span>
                                 <span class="pull-left">
-                                    <h4> {{ place.name }}</h4>
-                                    <p>Offers: {{ place.offers.count }} | Subscribers: {{ place.subscribers.count }}</p>
-                                </span>
-                                <span class="pull-right">
-                                  <span class="btn btn-xs btn-primary" onclick="updatePlace({{ place.id }}); return false;">Edit</span>
-                                    <span class="btn btn-xs btn-danger" onclick="deletePlace({{ place.id }}); return false;  ">
-                                        Delete
-                                    </span>
-
-                                  </button>
+                                    <h4> {{ caso.descripcion }}</h4>
+                                    <p>Fecha Ingreso: {{ caso.fecha_creado }} | Estado: {{ caso.get_estado_caso_id_display }}</p>
                                 </span>
                               </a>
 
@@ -75,9 +65,7 @@
 
 
 
-                <div class="text-right">
-                    <a href="#">Create <i class="fa fa-arrow-circle-right"></i></a>
-                </div>
+
 
             </div>
         </div>
