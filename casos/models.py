@@ -46,4 +46,15 @@ class Caso(models.Model):
     def __str__(self):              # __unicode__ on Python
    		return "Caso Id# " + str(self.id)
 
+class Avance(models.Model):
+    fecha_creado = models.DateTimeField(auto_now_add=True)
+    descripcion = models.CharField(max_length=200)
+    caso = models.ForeignKey(Caso, on_delete=models.CASCADE)
+    imagen_1 = models.ImageField(upload_to='images/', null=True)
+    imagen_2 = models.ImageField(upload_to='images/', null=True)
+    imagen_3 = models.ImageField(upload_to='images/', null=True)
+    imagen_4 = models.ImageField(upload_to='images/', null=True)
+    imagen_5 = models.ImageField(upload_to='images/', null=True)
 
+    def __str__(self):              # __unicode__ on Python 2
+        return self.descripcion
