@@ -40,7 +40,7 @@
 
                 {% for caso in casos %}
 
-                            <a href="#" class="list-group-item clearfix">
+                            <a href="{% url 'detail_caso' caso.id %}" class="list-group-item clearfix">
 
 
 
@@ -56,6 +56,10 @@
                                     <p>Fecha Ingreso: {{ caso.fecha_creado }} | Estado: {{ caso.get_estado_caso_id_display }}</p>
                                 </span>
                               </a>
+
+
+
+
 
 
 
