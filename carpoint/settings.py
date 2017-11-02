@@ -25,7 +25,7 @@ SECRET_KEY = 'l$imzqqi-nx)@il@(cch_a4@yqv1q*51qod3v5x)8b#+dz4g3$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['69.164.218.254']
 
 
 # Application definition
@@ -81,6 +81,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'carpoint.wsgi.application'
 
 
@@ -94,7 +96,7 @@ DATABASES = {
             'PORT': '3306',
             'NAME': 'carpoint',
             'USER': 'root',
-            'PASSWORD': '',
+            'PASSWORD': 'Q1w2e3r4t5@',
         }
     }
 
@@ -121,9 +123,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Tegucigalpa'
 
 USE_I18N = True
 
