@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+
+
+
+
+{% block title %}
+          Detalle de Caso
+{% endblock %}
+{% block head %}Detalle de Caso # {{ caso.id }}{% endblock %}
+{% block breadcrumb %}
+
+
+
+{% endblock %}
+{% block content %}
+
+
+
+    {% if user.is_authenticated %}
+    {% else %}
+        <p>Welcome, new user. Please log in.</p>
+    {% endif %}
+
+
+    <div class="col-lg-12">
+		<div class="row">
+					    <div class="eq-height">
+					        <div class="col-lg-12 eq-box-lg">
+					            <div class="panel">
+					                <div class="panel-heading">
+					                    <h3 class="panel-title">Informacion General</h3>
+					                </div>
+					                <div class="panel-body">
+
+					                    <!--Horizontal description-->
+					                    <!--===================================================-->
+					                    <dl class="dl-horizontal">
+					                        <dt>Fecha de Recepcion </dt>
+					                        <dd>{{ caso.fecha_creado }}</dd>
+					                        <dt>Descripcion</dt>
+					                        <dd>{{ caso.descripcion }}</dd>
+					                    </dl>
+					                    <!--===================================================-->
+
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+		<div class="panel">
+					                    <div class="panel-heading">
+					                        <h3 class="panel-title"><i class="demo-pli-file-jpg icon-fw"></i>Avances</h3>
+					                    </div>
+					                    <div class="panel-body">
+
+											<div class="row">
+
+
+
+												<div class="panel-group accordion" id="accordion">
+													{% for avance in avances %}
+													<div class="panel">
+
+														<!--Accordion title-->
+														<div class="panel-heading">
+															<h4 class="panel-title">
+																<a data-parent="#accordion" data-toggle="collapse" href="#collapse{{avance.pk}}" aria-expanded="false" class="collapsed">Avances del {{ avance.fecha_creado }}</a>
+															</h4>
+														</div>
+
+														<!--Accordion content-->
+														<div class="panel-collapse collapse" id="collapse{{avance.pk}}" aria-expanded="false" style="height: 0px;">
+															<div class="panel-body">
+																<div class="row">
+																 <div class="col-xs-6 col-md-2 col-md-offset-1">
+																   <img class="open-Image img-thumbnail" src="../media/{{ avance.imagen_1 }}" data-target="#demo-lg-modal" data-id="../media/{{ avance.imagen_1 }}" data-toggle="modal" />
+																 </div>
+																 <div class="col-xs-6 col-md-2">
+																   <img class="open-Image img-thumbnail" src="../media/{{ avance.imagen_2 }}" data-target="#demo-lg-modal" data-id="../media/{{ avance.imagen_2 }}" data-toggle="modal"/>
+																 </div>
+
+																 <div class="col-xs-6 col-md-2">
+																   <img class="open-Image img-thumbnail" src="../media/{{ avance.imagen_3 }}" data-target="#demo-lg-modal" data-id="../media/{{ avance.imagen_3 }}" data-toggle="modal"/>
+																 </div>
+																 <div class="col-xs-6 col-md-2">
+																   <img class="open-Image img-thumbnail" src="../media/{{ avance.imagen_4 }}" data-target="#demo-lg-modal" data-id="../media/{{ avance.imagen_4 }}" data-toggle="modal"/>
+																 </div>
+																 <div class="col-xs-6 col-md-2">
+																   <img class="open-Image img-thumbnail" src="../media/{{ avance.imagen_5 }}" data-target="#demo-lg-modal" data-id="../media/{{ avance.imagen_5 }}" data-toggle="modal"/>
+																 </div>
+																</div>
+															</div>
+														</div>
+													</div>
+													{% endfor %}
+												</div>
+
+
+
+
+
+
+
+												</div>
+
+					                    </div>
+					                </div>
+    </div>
+
+
+<div id="demo-lg-modal" class="modal fade" tabindex="-1" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+                    <h4 class="modal-title" id="myLargeModalLabel">Imagen de Avance</h4>
+                </div>
+                <div class="modal-body">
+					<img id="imageModal" class="img-responsive center-block" src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+	$(document).on("click", ".open-Image", function () {
+		 var imgUrl = $(this).data('id');
+		 $(".modal-body #imageModal").attr('src',imgUrl);;
+		 // As pointed out in comments,
+		 // it is superfluous to have to manually call the modal.
+		 // $('#addBookDialog').modal('show');
+	});
+</script>
+
+
+
+
+
+
+{% endblock %}
