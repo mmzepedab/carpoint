@@ -11,17 +11,17 @@ import logging
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-
+import sys
 # Create your views here.
 
 @login_required(login_url='/account/login/')
 def caso_list(request):
     if request.user.is_authenticated():
         logged_in_user = request.user
-        usuario_aseguradora = UsuarioAseguradora.objects.all().filter(usuario=logged_in_user)
-        logger.debug(usuario_aseguradora)
+        usuario_aseguradora = UsuarioAseguradora.objects.get(usuario__username=logged_in_user.username)
+        print(usuario_aseguradora.aseguradora, file=sys.stderr)
         if usuario_aseguradora:
-            logged_in_user_casos = Caso.objects.filter(aseguradora__pk=usuario_aseguradora)
+            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora)
         else:
             logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
     else:
