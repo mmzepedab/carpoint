@@ -18,8 +18,9 @@ import sys
 def caso_list(request):
     if request.user.is_authenticated():
         logged_in_user = request.user
-        usuario_aseguradora = UsuarioAseguradora.objects.get(usuario__username=logged_in_user.username)
-        print(usuario_aseguradora.aseguradora, file=sys.stderr)
+        usuario_aseguradora = UsuarioAseguradora.objects.filter(usuario=logged_in_user).first()
+
+        print(usuario_aseguradora, file=sys.stderr)
         if usuario_aseguradora:
             logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora)
         else:
