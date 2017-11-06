@@ -131,40 +131,10 @@
 
                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-right panel-default">
 
-                            <!-- Dropdown heading  -->
-                            <div class="pad-all bord-btm">
-                                <p class="text-main mar-btm"><span class="text-bold">750GB</span> of 1,000GB Used</p>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar" style="width: 70%;">
-                                        <span class="sr-only">70%</span>
-                                    </div>
-                                </div>
-                            </div>
 
-
-                            <!-- User dropdown menu -->
-                            <ul class="head-list">
-                                <li>
-                                    <a href="#">
-                                        <i class="pli-male icon-fw icon-lg"></i> Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="badge badge-danger pull-right">9</span>
-                                        <i class="pli-mail icon-fw icon-lg"></i> Messages
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="label label-success pull-right">New</span>
-                                        <i class="pli-gear icon-fw icon-lg"></i> Settings
-                                    </a>
-                                </li>
-                            </ul>
 
                             <!-- Dropdown footer -->
-                            <div class="pad-all text-right">
+                            <div class="pad-all ">
                                 <a href="{% url 'account_logout'  %}?next=/accounts/login" class="btn btn-primary">
                                     <i class="pli-unlock icon-fw"></i> Logout
                                 </a>
@@ -272,15 +242,7 @@
                                         </a>
                                     </div>
                                     <div id="profile-nav" class="collapse list-group bg-trans">
-                                        <a href="#" class="list-group-item">
-                                            <i class="pli-male icon-lg icon-fw"></i> View Profile
-                                        </a>
-                                        <a href="#" class="list-group-item">
-                                            <i class="pli-gear icon-lg icon-fw"></i> Settings
-                                        </a>
-                                        <a href="#" class="list-group-item">
-                                            <i class="pli-information icon-lg icon-fw"></i> Help
-                                        </a>
+
                                         <a href="{% url 'account_logout'  %}?next=/accounts/login" class="list-group-item">
                                             <i class="pli-unlock icon-lg icon-fw"></i> Logout
                                         </a>

@@ -11,6 +11,14 @@ class Aseguradora (models.Model):
     def __str__(self):  # __unicode__ on Python
         return self.nombre
 
+class UsuarioAseguradora(models.Model):
+    usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name='usuarios')
+    aseguradora = models.ForeignKey(Aseguradora, on_delete=models.CASCADE, related_name='aseguradoras')
+    class Meta:
+        unique_together = ('aseguradora', 'usuario')
+    def __str__(self):  # __unicode__ on Python
+        return "Usuario: " + str(self.usuario) + " -> Aseguradora: " + str(self.aseguradora)
+
 class Caso(models.Model):
     ESTADO_CASO = (
 		(1, 'Iniciado'),

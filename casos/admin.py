@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 from casos.models import (
     Caso,
     Aseguradora,
-    Avance
+    Avance,
+    UsuarioAseguradora
 )
 
 
@@ -57,6 +58,11 @@ class AseguradoraAdmin(admin.ModelAdmin):
 class AvanceAdmin(admin.ModelAdmin):
     model = Avance
 
+class UsuarioAseguradoraAdmin(admin.ModelAdmin):
+    model = UsuarioAseguradora
+    search_fields = ['aseguradora__nombre', 'usuario__username']
+
 admin.site.register(Avance, AvanceAdmin)
 admin.site.register(Caso, CasoAdmin)
 admin.site.register(Aseguradora, AseguradoraAdmin)
+admin.site.register(UsuarioAseguradora, UsuarioAseguradoraAdmin)

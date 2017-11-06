@@ -96,7 +96,7 @@ DATABASES = {
             'PORT': '3306',
             'NAME': 'carpoint',
             'USER': 'root',
-            'PASSWORD': '',
+            'PASSWORD': 'Q1w2e3r4t5@',
         }
     }
 

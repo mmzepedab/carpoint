@@ -5,7 +5,12 @@ from django.shortcuts import render, get_object_or_404
 
 from django.contrib.auth.decorators import login_required
 
-from .models import Caso, Avance
+from .models import Caso, Avance, UsuarioAseguradora
+
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 
@@ -13,7 +18,12 @@ from .models import Caso, Avance
 def caso_list(request):
     if request.user.is_authenticated():
         logged_in_user = request.user
-        logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
+        usuario_aseguradora = UsuarioAseguradora.objects.all().filter(usuario=logged_in_user)
+        logger.debug(usuario_aseguradora)
+        if usuario_aseguradora:
+            logged_in_user_casos = Caso.objects.filter(aseguradora__pk=usuario_aseguradora)
+        else:
+            logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
     else:
         logged_in_user_casos = ""
 
@@ -28,6 +38,7 @@ def caso_detail(request, caso_id):
     if request.user.is_authenticated():
         logged_in_user = request.user
         logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
+
     else:
         logged_in_user_casos = ""
 
