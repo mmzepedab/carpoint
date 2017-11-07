@@ -37,7 +37,7 @@ class Caso(models.Model):
     estado_caso_id = models.IntegerField(default=1, choices=ESTADO_CASO)
     observaciones = models.CharField(max_length=200)
     cliente = models.ForeignKey(User, on_delete=models.CASCADE, related_name='casos')
-    aseguradora = models.ForeignKey(Aseguradora, on_delete=models.CASCADE, related_name='casos')
+    aseguradora = models.ForeignKey(Aseguradora, on_delete=models.CASCADE, related_name='casos', null=True, blank=True)
     fecha_creado = models.DateTimeField(auto_now_add=True)
     fecha_modificado = models.DateTimeField(auto_now_add=True)
     #Vehiculo

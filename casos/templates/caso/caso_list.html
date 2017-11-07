@@ -5,9 +5,9 @@
 
 
 {% block title %}
-          Mis Casos
+          Mis Vehículos
 {% endblock %}
-{% block head %}Mis Casos{% endblock %}
+{% block head %}Mis Vehículos{% endblock %}
 {% block breadcrumb %}
 
 
@@ -28,7 +28,7 @@
             <div class="panel-heading">
 
                 <div class="panel-heading clearfix">
-                                      <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Casos</h4>
+                                      <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Vehículos</h4>
 
                                     </div>
             </div>
@@ -53,7 +53,8 @@
                                 </span>
                                 <span class="pull-left">
                                     <h4> {{ caso.descripcion }}</h4>
-                                    <p>Fecha Ingreso: {{ caso.fecha_creado }} | Estado: {{ caso.get_estado_caso_id_display }}</p>
+                                    <p><b>Fecha Ingreso: </b> {{ caso.fecha_creado }} | <b>Estado:</b> {{ caso.get_estado_caso_id_display }} | <b>Aseguradora:</b> {{ caso.aseguradora }} </p>
+                                    <p><b>Observaciones: </b> {{ caso.observaciones }} </p>
                                 </span>
                               </a>
 
