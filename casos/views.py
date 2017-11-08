@@ -20,7 +20,7 @@ def caso_list(request):
         logged_in_user = request.user
         usuario_aseguradora = UsuarioAseguradora.objects.filter(usuario=logged_in_user).first()
 
-        print(usuario_aseguradora, file=sys.stderr)
+        #print(usuario_aseguradora, file=sys.stderr)
         if usuario_aseguradora:
             logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora)
         else:
