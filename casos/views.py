@@ -22,14 +22,17 @@ def caso_list(request):
 
         #print(usuario_aseguradora, file=sys.stderr)
         if usuario_aseguradora:
+            is_aseguradora = True
             logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora)
         else:
+            is_aseguradora = False
             logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
     else:
         logged_in_user_casos = ""
 
     context = {
         "casos" : logged_in_user_casos,
+        "is_aseguradora": is_aseguradora,
     }
 
     return render(request, "caso/caso_list.html",  context)

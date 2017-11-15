@@ -21,9 +21,9 @@ class UsuarioAseguradora(models.Model):
 
 class Caso(models.Model):
     ESTADO_CASO = (
-		(1, 'Iniciado'),
+		(1, 'Recibido'),
 		(2, 'En Proceso'),
-		(3, 'Completado'),
+		(3, 'Terminando'),
     )
     SI_NO_CHOICES = (
         (1, "Si"),

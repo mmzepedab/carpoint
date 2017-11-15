@@ -24,7 +24,30 @@
 
 
     <div class="col-lg-12">
+        {% if is_aseguradora %}
+        <div class="panel">
+					    <div class="panel-body">
+                            <h3 class="panel-title">Buscar</h3>
+					        <!-- Inline Form  -->
+					        <!--===================================================-->
+					        <form class="form-inline">
+					            <div class="form-group">
+					                <label for="demo-inline-inputmail" class="sr-only">Buscar usuario:</label>
+                                    <row>
+					                <input type="email" placeholder="Nombre de usuario" id="demo-inline-inputmail" class="form-control">
+					                </row>
+                                </div>
+					            <button class="btn btn-primary" type="submit">Buscar</button>
+					        </form>
+					        <!--===================================================-->
+					        <!-- End Inline Form  -->
+
+					    </div>
+					</div>
+        {% endif %}
+
         <div class="panel panel-default">
+
             <div class="panel-heading">
 
                 <div class="panel-heading clearfix">
@@ -52,7 +75,7 @@
                                     &emsp;
                                 </span>
                                 <span class="pull-left">
-                                    <h4> {{ caso.descripcion }}</h4>
+                                    <h4> Marca: {{ caso.marca }} | Modelo: {{ caso.modelo }} | Año: {{ caso.anio }}</h4>
                                     <p><b>Fecha Ingreso: </b> {{ caso.fecha_creado }} | <b>Estado:</b> {{ caso.get_estado_caso_id_display }} | <b>Aseguradora:</b> {{ caso.aseguradora }} </p>
                                     <p><b>Observaciones: </b> {{ caso.observaciones }} </p>
                                 </span>

@@ -35,7 +35,7 @@ class AvanceInline(admin.StackedInline):
 class CasoAdmin(admin.ModelAdmin):
     form = CasoAdminForm
     fields = (
-        'descripcion',
+        ('descripcion', 'estado_caso_id'),
         ('cliente', 'aseguradora'),
         ('marca', 'modelo', 'anio'),
         ('color', 'placa', 'tipo'),
