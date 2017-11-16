@@ -23,7 +23,8 @@ def caso_list(request):
         #print(usuario_aseguradora, file=sys.stderr)
         if usuario_aseguradora:
             is_aseguradora = True
-            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora)
+            query = request.GET.get('search', '')
+            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora, cliente__username__contains=query)
         else:
             is_aseguradora = False
             logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)
