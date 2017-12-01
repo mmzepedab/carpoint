@@ -24,7 +24,7 @@ def caso_list(request):
         if usuario_aseguradora:
             is_aseguradora = True
             query = request.GET.get('search', '')
-            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora, cliente__username__contains=query)
+            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora, cliente__username__icontains=query)
         else:
             is_aseguradora = False
             logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)

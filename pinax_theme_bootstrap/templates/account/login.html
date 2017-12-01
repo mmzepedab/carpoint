@@ -1,4 +1,5 @@
 {% extends "site_base.html" %}
+{% load staticfiles %}
 
 {% load account_tags %}
 {% load i18n %}
@@ -7,30 +8,44 @@
 {% block head_title %}{% trans "Log in" %}{% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div class="col-md-4">
-            <form method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-                <legend>{% trans "Log in to an existing account" %}</legend>
-                {% csrf_token %}
-                {{ form|bootstrap }}
-                {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+
+
+    <!-- LOGIN FORM -->
+		<!--===================================================-->
+		<div class="cls-content">
+		    <div class="cls-content-sm panel">
+                    <div class="panel-body">
+                        <div class="mar-ver pad-btm" >
+                            <span><img src="{% static 'casos/img/logo-carpoint-colors.png' %}" width = "200px" alt="Nifty Logo" style="display:block; margin: auto;"></span>
+                        </div>
+                        <form method="POST" action="{% url "account_login" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+
+                    {% csrf_token %}
+                    {{ form|bootstrap }}
+                    {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
+                    <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Forgot your password?" %}</a>
+                </form>
+                {% if ACCOUNT_OPEN_SIGNUP %}
+                    <p class="login-signup">
+                        <small>
+                            {% trans "Don't have an account?" %}  <strong><a href="{% urlnext 'account_signup' %}">{% trans "Sign up" %}</a></strong>
+                        </small>
+                    </p>
                 {% endif %}
-                <button type="submit" class="btn btn-primary">{% trans "Log in" %}</button>
-                <a href="{% url "account_password_reset" %}" class="btn btn-link">{% trans "Forgot your password?" %}</a>
-            </form>
-            {% if ACCOUNT_OPEN_SIGNUP %}
-                <p class="login-signup">
-                    <small>
-                        {% trans "Don't have an account?" %}  <strong><a href="{% urlnext 'account_signup' %}">{% trans "Sign up" %}</a></strong>
-                    </small>
-                </p>
-            {% endif %}
-        </div>
-        <div class="col-md-4">
-            {% include "account/_login_sidebar.html" %}
-        </div>
-    </div>
+                </div>
+            </div>
+            </div>
+		<!--===================================================-->
+
+
+
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
 {% endblock %}
 
 {% block scripts %}
