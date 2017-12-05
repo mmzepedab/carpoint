@@ -33,7 +33,9 @@
 					            <div class="form-group">
 					                <label for="demo-inline-inputmail" class="sr-only">Buscar usuario:</label>
 
-					                <input type="text" name="search" placeholder="Nombre de usuario" id="demo-inline-inputmail" class="form-control">
+					                <!-- <input type="text" name="search" placeholder="Nombre de usuario" id="demo-inline-inputmail" class="form-control"> -->
+                                    <input type="text" name="firstname" placeholder="Nombre" id="demo-inline-inputmail" class="form-control">
+                                    <input type="text" name="lastname" placeholder="Apellido" id="demo-inline-inputname" class="form-control">
 
                                 </div>
 					            <button class="btn btn-primary" type="submit">Buscar</button>
@@ -79,6 +81,7 @@
                                     <p><b>Observaciones: </b> {{ caso.observaciones }} </p>
                                     {% if is_aseguradora %}
                                     <p><b>Usuario: </b> {{ caso.cliente }} </p>
+                                    <p><b>Nombre Completo: </b> {{ caso.cliente.first_name }} {{ caso.cliente.last_name }}</p>
                                     {% endif %}
                                 </span>
                               </a>

@@ -24,7 +24,11 @@ def caso_list(request):
         if usuario_aseguradora:
             is_aseguradora = True
             query = request.GET.get('search', '')
-            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora, cliente__username__icontains=query)
+            firstname = request.GET.get('firstname', '')
+            lastname = request.GET.get('lastname', '')
+            logged_in_user_casos = Caso.objects.all().filter(aseguradora=usuario_aseguradora.aseguradora,
+                                                             cliente__first_name__icontains=firstname,
+                                                             cliente__last_name__icontains=lastname)
         else:
             is_aseguradora = False
             logged_in_user_casos = Caso.objects.filter(cliente=logged_in_user)

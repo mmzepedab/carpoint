@@ -25,7 +25,7 @@ SECRET_KEY = 'l$imzqqi-nx)@il@(cch_a4@yqv1q*51qod3v5x)8b#+dz4g3$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['69.164.218.254', '127.0.0.1', 'carpointhn.com']
+ALLOWED_HOSTS = ['69.164.218.254', '127.0.0.1', 'carpointhn.com', 'www.carpointhn.com']
 
 
 # Application definition
