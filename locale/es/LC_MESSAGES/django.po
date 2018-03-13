@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-01 22:39-0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: carpoint/settings.py:140
+msgid "English"
+msgstr ""
+
+#: carpoint/settings.py:141
+msgid "Spanish"
+msgstr ""
+
+#: casos/templates/account/base.html:9
+msgid "Settings"
+msgstr ""
+
+#: casos/templates/account/base.html:12
+#: casos/templates/account/settings.html:8
+#: casos/templates/account/settings.html:14
+msgid "Account"
+msgstr ""
+
+#: casos/templates/account/base.html:15
+#: casos/templates/account/password_change.html:8
+#: casos/templates/account/password_change.html:14
+msgid "Change password"
+msgstr ""
+
+#: casos/templates/account/base.html:18
+msgid "Delete account"
+msgstr ""
+
+#: casos/templates/account/delete.html:7
+#: casos/templates/account/delete.html:10
+msgid "Delete Account"
+msgstr ""
+
+#: casos/templates/account/delete.html:12
+#, python-format
+msgid ""
+"If you go ahead and delete your account, your information will be "
+"<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
+msgstr ""
+
+#: casos/templates/account/delete.html:16
+msgid "Delete My Account"
+msgstr ""
+
+#: casos/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"A user on %(site_name)s has created an account using this email address.\n"
+"\n"
+"To confirm this email address, go to %(activate_url)s\n"
+"\n"
+"If you did not sign up for this site, you can ignore this message.\n"
+msgstr ""
+
+#: casos/templates/account/email/email_confirmation_subject.txt:1
+#, python-format
+msgid "Confirm email address for %(site_name)s"
+msgstr ""
+
+#: casos/templates/account/email/invite_user.txt:1
+#, python-format
+msgid ""
+"You have been invited to sign up at %(name)s.\n"
+"\n"
+"%(signup_url)s\n"
+msgstr ""
+
+#: casos/templates/account/email/invite_user_subject.txt:1
+#, python-format
+msgid "Create an account on %(name)s"
+msgstr ""
+
+#: casos/templates/account/email/password_change.txt:1
+#, python-format
+msgid ""
+"This is the email notification to confirm your password has been changed on "
+"%(now)s."
+msgstr ""
+
+#: casos/templates/account/email/password_change_subject.txt:1
+msgid "Change password email notification"
+msgstr ""
+
+#: casos/templates/account/email/password_reset.txt:1
+#, python-format
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password for your user account at %(site_name)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+msgstr ""
+
+#: casos/templates/account/email/password_reset_subject.txt:1
+#, python-format
+msgid "[%(site_name)s] Password reset"
+msgstr ""
+
+#: casos/templates/account/email_confirm.html:5
+#: casos/templates/account/email_confirm.html:11
+msgid "Confirm Email"
+msgstr ""
+
+#: casos/templates/account/email_confirm.html:14
+#, python-format
+msgid "Confirm email address <b>%(email)s</b>?"
+msgstr ""
+
+#: casos/templates/account/email_confirm.html:15
+msgid "Confirm"
+msgstr ""
+
+#: casos/templates/account/email_confirmation_sent.html:5
+#: casos/templates/account/email_confirmation_sent.html:8
+msgid "Confirm your email address"
+msgstr ""
+
+#: casos/templates/account/email_confirmation_sent.html:10
+#, python-format
+msgid ""
+"We have sent you an email to <b>%(email)s</b> for verification. Follow the "
+"link provided to finalize the signup process. If you do not receive it "
+"within a few minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s"
+"\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: casos/templates/account/email_confirmation_sent.html:11
+msgid "Go back"
+msgstr ""
+
+#: casos/templates/account/email_confirmed.html:5
+#: casos/templates/account/email_confirmed.html:8
+msgid "Email confirmed"
+msgstr ""
+
+#: casos/templates/account/email_confirmed.html:9
+#, python-format
+msgid "You have confirmed <b>%(email)s</b>"
+msgstr ""
+
+#: casos/templates/account/login.html:7 casos/templates/account/login.html:19
+#: casos/templates/account/signup.html:23
+msgid "Log in"
+msgstr ""
+
+#: casos/templates/account/login.html:13
+msgid "Log in to an existing account"
+msgstr ""
+
+#: casos/templates/account/login.html:20
+msgid "Forgot your password?"
+msgstr ""
+
+#: casos/templates/account/login.html:25
+msgid "Don't have an account?"
+msgstr ""
+
+#: casos/templates/account/login.html:25 casos/templates/account/signup.html:7
+#: casos/templates/account/signup.html:13
+#: casos/templates/account/signup.html:19
+#: casos/templates/account/signup_closed.html:5
+msgid "Sign up"
+msgstr ""
+
+#: casos/templates/account/logout.html:5
+#: casos/templates/account/logout.html:11
+#: casos/templates/account/logout.html:15
+msgid "Log out"
+msgstr ""
+
+#: casos/templates/account/logout.html:14
+msgid "Are you sure you want to log out?"
+msgstr ""
+
+#: casos/templates/account/password_change.html:18
+#: casos/templates/account/password_reset_token.html:16
+#: casos/templates/account/settings.html:17
+msgid "Save"
+msgstr ""
+
+#: casos/templates/account/password_reset.html:7
+#: casos/templates/account/password_reset.html:15
+msgid "Password reset"
+msgstr ""
+
+#: casos/templates/account/password_reset.html:16
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll send you "
+"an email allowing you to reset it."
+msgstr ""
+
+#: casos/templates/account/password_reset.html:22
+msgid "Reset my password"
+msgstr ""
+
+#: casos/templates/account/password_reset.html:29
+#, python-format
+msgid ""
+"If you have any trouble resetting your password, contact us at <a href="
+"\"mailto:%(THEME_CONTACT_EMAIL)s\">%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: casos/templates/account/password_reset_sent.html:6
+#: casos/templates/account/password_reset_sent.html:9
+msgid "Password reset sent"
+msgstr ""
+
+#: casos/templates/account/password_reset_sent.html:11
+#, python-format
+msgid ""
+"We have sent you an email. If you do not receive it within a few minutes, "
+"try resending or contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: casos/templates/account/password_reset_sent.html:20
+msgid "Resend"
+msgstr ""
+
+#: casos/templates/account/password_reset_sent.html:25
+#, python-format
+msgid ""
+"We have resent the password email. If you do not receive it within a few "
+"minutes, contact us at <a href=\"mailto:%(THEME_CONTACT_EMAIL)s\">"
+"%(THEME_CONTACT_EMAIL)s</a>."
+msgstr ""
+
+#: casos/templates/account/password_reset_token.html:6
+#: casos/templates/account/password_reset_token.html:12
+msgid "Set your new password"
+msgstr ""
+
+#: casos/templates/account/password_reset_token_fail.html:5
+#: casos/templates/account/password_reset_token_fail.html:8
+msgid "Bad token"
+msgstr ""
+
+#: casos/templates/account/password_reset_token_fail.html:10
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(url)s\">new password reset</a>."
+msgstr ""
+
+#: casos/templates/account/signup.html:23
+msgid "Already have an account?"
+msgstr ""
+
+#: casos/templates/account/signup_closed.html:8
+msgid "This site is in private beta"
+msgstr ""
+
+#: casos/templates/account/signup_closed.html:9
+msgid "If you have signup code you can enter it below."
+msgstr ""
+
+#: casos/templates/account/signup_closed.html:11
+msgid "Your signup code..."
+msgstr ""
