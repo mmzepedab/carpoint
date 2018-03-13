@@ -78,7 +78,7 @@
                                 <span class="pull-left">
                                     <h4> Marca: {{ caso.marca }} | Modelo: {{ caso.modelo }} | Año: {{ caso.anio }}</h4>
                                     <p><b>Fecha Ingreso: </b> {{ caso.fecha_creado }} | <b>Estado:</b> {{ caso.get_estado_caso_id_display }} | <b>Aseguradora:</b> {{ caso.aseguradora }} </p>
-                                    <p><b>Observaciones: </b> {{ caso.observaciones }} </p>
+                                    <p><b>Descripción: </b> {{ caso.descripcion }} </p>
                                     {% if is_aseguradora %}
                                     <p><b>Usuario: </b> {{ caso.cliente }} </p>
                                     <p><b>Nombre Completo: </b> {{ caso.cliente.first_name }} {{ caso.cliente.last_name }}</p>

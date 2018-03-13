@@ -39,11 +39,11 @@
 											<dt>Vehiculo: </dt>
 					                        <dd>{{ caso.marca }} {{ caso.modelo }} {{ caso.anio }}</dd>
 											<dt>Nombre de Cliente: </dt>
-					                        <dd>{{ caso.cliente }}</dd>
+					                        <dd>{{ caso.cliente.first_name }} {{ caso.cliente.last_name }}</dd>
 					                        <dt>Fecha de Recepcion </dt>
 					                        <dd>{{ caso.fecha_creado }}</dd>
-					                        <dt>Descripcion</dt>
-					                        <dd>{{ caso.descripcion }}</dd>
+					                        <dt>Observación</dt>
+					                        <dd>{{ caso.observaciones }}</dd>
 					                    </dl>
 					                    <!--===================================================-->
 
